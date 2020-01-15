@@ -12,8 +12,7 @@ body{
     margin: 0;
     background-image: url('images/starwars.png');
     height: auto;
-    width: 100vh;
-    z-index: 0;
+   
     
 }
 
@@ -24,6 +23,7 @@ body{
     text-align: center;
     font-size: 5em;
     border: rgb(224, 213, 46) 1px solid;
+    margin: 50px;
 }
 
 .info-container{
@@ -42,10 +42,37 @@ body{
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
 }
 
 .card {
     background-color: #fafafa;
-    height: 125px;
-    widows: 175px;;
+    height: 175px;
+    width: 125px;;
+    position: relative;
+    transition: 0.5s;
+   
+    
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(252, 15, 15, 0.945);
+}
+
+.card-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img{
+    transition: all .5s ease;
+}
+
+#img:hover {
+    transform: scale(.8);
 }
