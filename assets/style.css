@@ -1,0 +1,51 @@
+@font-face {
+    src: url('fonts/SfDistantGalaxy-0l3d.ttf');
+    font-family: Star;
+}
+
+* {
+    box-sizing: border-box;
+    
+}
+
+body{
+    margin: 0;
+    background-image: url('images/starwars.png');
+    height: auto;
+    width: 100vh;
+    z-index: 0;
+    
+}
+
+.title {
+    color: rgb(255, 255, 255);
+    font-family: Star;
+    font-weight: normal;
+    text-align: center;
+    font-size: 5em;
+    border: rgb(224, 213, 46) 1px solid;
+}
+
+.info-container{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    font-family: 'Baloo Bhai', cursive;
+    color: rgb(187, 46, 46);
+    font-size: 4rem;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+}
+
+.card {
+    background-color: #fafafa;
+    height: 125px;
+    widows: 175px;;
+}
