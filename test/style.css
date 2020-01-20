@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url('starwars.png')
+}
+
+#container{
+    width: 100px;
+    height: 800px;
+    border: 1px solid #111;
+    margin: 10px, auto;
+}
