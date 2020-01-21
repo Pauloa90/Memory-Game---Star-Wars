@@ -1,20 +1,23 @@
 //anonneiou funcition
 (function(){
-    var pics = [];
-for (var i =0; i< 16; i ++){
-    var img = {
-        src : "img/"+ i + ".jpg",
-        id : i%8  
-    };
-    pics.push(img);
-}
 
+  var images = [];
+
+  for (var i = 0; i < 16; i++){
+      var img = {
+          src : "images/" + i + ".jpg",
+          id: i % 8
+      }
+      images.push(img);
+  } console.log(images);
+
+  
 
     startGame();
 
     function startGame(){
 
-        var frontFaces = document.getElementsByClassName('front')
+        var frontFaces = document.getElementsByClassName('front');
 
  // Displaying the cards on the HTML file acoording to the id number
         for (var i = 0; i < 16; i++){
@@ -33,10 +36,12 @@ for (var i =0; i< 16; i ++){
             card.style.left = i  === 0 || i === 4 || i === 8  || i === 12 ? 20 + 'px' : i % 4 * 160 +20+ 'px';
             
             card.addEventListener('click', flipCard, false);
-            frontFaces[i].style.background = "url('" + pics[i].src + "')";
-            
-            
 
+            
+        }
+        for (var i = 0; i < 16; i++){
+             frontFaces[i].style.background = "url('assets/" + images[i].src + "')";
+            
         }
     }
     function flipCard(){
@@ -45,6 +50,7 @@ for (var i =0; i< 16; i ++){
         faces[1].classList.toggle('flipped');
         
     }
+    
 
 
 

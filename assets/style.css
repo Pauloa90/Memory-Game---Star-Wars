@@ -53,15 +53,21 @@ body{
 }
 
 .back.flipped{
- transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .front{
     transform: rotateY(-180deg);
-    background-size: 160%;
-
+    
+    
 }
 
 .front.flipped{
-    transform: rotateY(0deg)
+    transform: rotateY(0deg);
+    background-size: 100%;
+    
+}
+
+#0, #1, #2{
+    background-size: 100%;
 }
