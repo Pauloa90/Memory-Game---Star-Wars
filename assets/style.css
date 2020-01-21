@@ -5,74 +5,41 @@
 
 * {
     box-sizing: border-box;
-    
-}
-
-body{
     margin: 0;
-    background-image: url('images/starwars.png');
-    height: auto;
-   
-    
+    padding: 0;
+}
+body{
+   /* background: url('starwars.png')*/
+}
+h1{
+    color: rgb(204, 44, 44);
 }
 
-.title {
-    color: rgb(255, 255, 255);
-    font-family: Star;
-    font-weight: normal;
-    text-align: center;
-    font-size: 5em;
-    border: rgb(224, 213, 46) 1px solid;
-    margin: 50px;
-}
-
-.info-container{
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
-}
-
-.info {
-    font-family: 'Baloo Bhai', cursive;
-    color: rgb(187, 46, 46);
-    font-size: 4rem;
-}
-
-.game-container {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
-    margin: 50px;
-    justify-content: center;
+#container{
+    width: 1000px;
+    height: 800px;
+    border: 1px solid rgb(235, 9, 9);
+    margin: 100px auto;
+    position: relative;
+    border-radius: 15px;   
 }
 
 .card {
-    background-color: #fafafa;
-    height: 175px;
-    width: 125px;;
-    position: relative;
-    transition: 0.5s;
-   
+    width: 160px;
+    height: 240px;
+    position: absolute;
+    border-radius: 10px;
+    border: solid;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
     
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(252, 15, 15, 0.945);
-}
+back{
+    background: url('back.jpg');
 
-.card-face{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#img{
-    transition: all .5s ease;
-}
-
-#img:hover {
-    transform: scale(.8);
 }
