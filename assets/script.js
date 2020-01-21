@@ -16,6 +16,7 @@
     startGame();
 
     function startGame(){
+        images = randomSort(images);
 
         var frontFaces = document.getElementsByClassName('front');
 
@@ -44,6 +45,22 @@
             
         }
     }
+
+    function randomSort(oldArray){
+        var newArray = [];
+
+        while(newArray.length !== oldArray.length){
+            var i = Math.floor(Math.random()*oldArray.length);
+
+            if(newArray.indexOf(oldArray[i]) < 0){
+                newArray.push(oldArray[i])
+            }
+        }
+        return newArray;
+    }
+
+
+
     function flipCard(){
         var faces = this.getElementsByClassName('face');
         faces[0].classList.toggle('flipped');

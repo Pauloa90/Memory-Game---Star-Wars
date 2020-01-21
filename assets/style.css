@@ -57,17 +57,13 @@ body{
 }
 
 .front{
-    transform: rotateY(-180deg);
-    
-    
+    transform: rotateY(-180deg);  
 }
 
 .front.flipped{
     transform: rotateY(0deg);
-    background-size: 100%;
-    
-}
 
-#0, #1, #2{
-    background-size: 100%;
+}
+img{
+    background: center no-repeat;
 }
