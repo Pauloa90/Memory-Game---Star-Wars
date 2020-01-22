@@ -10,8 +10,8 @@
 
 body{
     background-color: #555;
-   /* background: url('images/starwars.png')*/
-   text-align: center;
+    background: url('images/starwars.png');
+    text-align: center;
 }
 #container{
     width: 1000px;
@@ -78,7 +78,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .5);
-    z-index: -2;
+    z-index: -10;
     
 }
 
