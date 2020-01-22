@@ -78,16 +78,20 @@
         // It puts the Game Over Image at the very bacl of the HTML file.
         modalGameOver.style.zIndex = "-2";
 
-        // It removes the event click 
+        // It removes the event click from the Game Over image.
         modalGameOver.removeEventListener('click', startGame, false);
     }
 
+    // This function will shuffle the cards every time that the page is loaded.
     function randomSort(oldArray) {
+        //It will create an empty array.
         var newArray = [];
 
+        // The new array must have the same number of elements as the old array 
         while (newArray.length !== oldArray.length) {
             var i = Math.floor(Math.random() * oldArray.length);
 
+            // This condition will check if the  elements of the index "i" exists in the new array.
             if (newArray.indexOf(oldArray[i]) < 0) {
                 newArray.push(oldArray[i])
             }
@@ -96,33 +100,44 @@
     }
 
 
-
+    // This function will flip the cards.
     function flipCard() {
+        // This will verify if there are more than 2 cards flipped.
         if (flippedCards.length < 2) {
             var faces = this.getElementsByClassName('face');
 
+            // That condition will check if the card is alreade flipped.
             if (faces[0].classList.length > 2) {
                 return;
             }
 
+            // This function will add a class "flipped" to the cards linking them to sheet style.
             faces[0].classList.toggle('flipped');
             faces[1].classList.toggle('flipped');
 
+            //That function will put the card clicked into the array of flipped cards.
             flippedCards.push(this);
 
+            //It verifes if the number of flipped cards is 2.
             if(flippedCards.length === 2){
+                // It verifies if the cards have the same id.
                 if(flippedCards[0].childNodes[3.].id === flippedCards[1].childNodes[3].id){
+                    // If the cards match a class "match" will be added to them.
                     flippedCards[0].childNodes[1].classList.toggle('match');
                     flippedCards[0].childNodes[3].classList.toggle('match');
                     flippedCards[1].childNodes[1].classList.toggle('match');
                     flippedCards[1].childNodes[3].classList.toggle('match'); 
-
+                    
+                    //It calls the function showing the Match message.
                     matchCardSign();
 
+                    // It increases the counter in one.
                     matches++;
 
+                    //It empties the array of flipped cards.
                     flippedCards = [];
 
+                    // When the number of matches is equal to 8, it will call the function "gameOver"
                     if(matches === 8){
                         gameOver();
                     }
@@ -131,27 +146,37 @@
 
 
         } else {
+
+            // This condition will make the third click flip the cards in case they dont match.
             flippedCards[0].childNodes[1].classList.toggle('flipped');
             flippedCards[0].childNodes[3].classList.toggle('flipped');
             flippedCards[1].childNodes[1].classList.toggle('flipped');
             flippedCards[1].childNodes[3].classList.toggle('flipped');
 
+            //It empties the array of flipped cards.
             flippedCards = [];
         }
 
     }
 
    
-
+    // This function will reset all the parameters
     function gameOver() {
+        // It pulls the message "Game Over" to the front of the page.
         modalGameOver.style.zIndex = 10;
+
+        // It adds the event "clicl" to the image "Game Over"
         modalGameOver.addEventListener('click', startGame, false);
     }
 
+    // This function will make a message come up when the cards matches.
     function matchCardSign() {
+        // It brings the message/image to the front.
         imgMatchSign.style.zIndex = 1;
         imgMatchSign.style.top = 150 + 'px';
         imgMatchSign.style.opacity = 0;
+        // This function will make the message last just 1.5 second and go back to the back
+        // the html file.
         setTimeout(function(){  
             imgMatchSign.style.zIndex = -1;
             imgMatchSign.style.top = 250 + 'px';

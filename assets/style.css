@@ -14,8 +14,8 @@ body{
     text-align: center;
 }
 #container{
-    width: 1000px;
-    height: 800px;
+    width: 665px;
+    height: 750px;
     border: 1px solid rgb(235, 9, 9);
     margin: 100px auto;
     position: relative;
@@ -72,11 +72,11 @@ body{
 }
 
 
-#modalGameOver{
+img#modalGameOver{
     position: absolute;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     background-color: rgba(0, 0, 0, .5);
     z-index: -10;
     
