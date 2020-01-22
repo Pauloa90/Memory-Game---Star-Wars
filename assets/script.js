@@ -48,17 +48,17 @@
 
             var card = document.querySelector('#card' + i)
             if (i < 4) {
-                card.style.top = 20 + 'px'
+                card.style.top = 1 + 'vh'
             } else if (i >= 4 && i < 8) {
-                card.style.top = 200 + 'px'
+                card.style.top = 16 + 'vh'
             } else if (i >= 8 && i < 12) {
-                card.style.top = 380 + 'px'
+                card.style.top = 31 + 'vh'
             } else {
-                card.style.top = 560 + 'px'
+                card.style.top = 46 + 'vh'
             }
             // Displaying the cards on the HTML file according to the id number (horizontally) .
             if (i)
-                card.style.left = i === 0 || i === 4 || i === 8 || i === 12 ? 20 + 'px' : i % 4 * 160 + 20 + 'px';
+                card.style.left = i === 0 || i === 4 || i === 8 || i === 12 ? 2 + 'vh' : i % 4 * 12 + 2 + 'vh';
             
                 // on click cards will  answer to function called to flip the cards
             card.addEventListener('click', flipCard, false);

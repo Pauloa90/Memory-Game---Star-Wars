@@ -11,38 +11,46 @@
 
 body{
     background-color: #555;
-    /*background: url('images/starwars.png');*/
+    background: url('images/starwars.png');
     text-align: center;
+    overflow: hidden;
 }
 
 h1{
     font-family: Star;
     text-shadow: 0 0 4px yellow ;
+    font-size: 8vh;
+    margin: 0;
+    margin-top: 2vh;
 
 }
 #container{
-    width: 665px;
-    height: 750px;
-    border: 1px solid rgb(235, 9, 9);
-    margin: 100px auto;
+    width: 55vh;
+    height: 65vh;
     position: relative;
+    margin: 100px auto;
+    
     border-radius: 15px;   
     background-color: #2d038f;
+    margin-top: 0vh;
 }
 
 .card {
-    width: 140px;
-    height: 160px;
+    width: 10vh;
+    height: 13vh;
     position: absolute;
     border-radius: 10px;
     border: solid;
     left: 20px;
     transition: .5s;
     perspective: 600px;
+    overflow: hidden;
 }
 
+
+
 .card:hover{
-    box-shadow: 10px 10px 10px #23dd1d;
+    box-shadow: 3px 3px 3px #23dd1d;
     transition: .5s;
 }
 
@@ -67,6 +75,7 @@ h1{
 
 .back.flipped{
     transform: rotateY(180deg);
+    
 }
 
 .front{
