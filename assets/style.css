@@ -1,8 +1,9 @@
-/* @font-face {
+ @font-face {
     src: url('fonts/SfDistantGalaxy-0l3d.ttf');
     font-family: Star;
+    text-shadow: 5px 5px yellow;
 }
-*/
+
 *{
     margin: 0;
     padding: 0;
@@ -10,8 +11,14 @@
 
 body{
     background-color: #555;
-    background: url('images/starwars.png');
+    /*background: url('images/starwars.png');*/
     text-align: center;
+}
+
+h1{
+    font-family: Star;
+    text-shadow: 0 0 4px yellow ;
+
 }
 #container{
     width: 665px;
