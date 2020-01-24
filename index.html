@@ -8,6 +8,8 @@
 	<link href="assets/style.css" rel="stylesheet">
 	</link>
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+
 	
 	<title>Star Wars</title>
 </head>
@@ -17,12 +19,12 @@
 
 	<div class="info-container">
 		
-        <h3>Time</h3><span class="time">60</span>
-        <h3>Flips</h3><span class="flips">0</span>
+        <h3>Time</h3><span class="time" id="timer">60</span>
+        <h3>Flips</h3><span class="flips" id="flips">0</span>
 		
 	</div>
     
-	<div id="container"> Teste 
+	<div id="container">
 		<div class="card" id="card0">
 			<div class="face back"></div>
 			<div class="face front"></div>

@@ -14,6 +14,10 @@
     // This variable will target an image to show when the players matches 2 cards.
     var imgMatchSign = document.querySelector('#imgMatchSign')
 
+    var timer = document.getElementById('timer')
+    var counter = 0
+    var flips = document.getElementById('flips')
+    
     // This structure will set an attribute “source” and “id” to each card and then, those
     // will be put into an array "image".
     for (var i = 0; i < 16; i++) {
@@ -45,6 +49,11 @@
         var frontFaces = document.getElementsByClassName('front');
         var backFaces = document.getElementsByClassName('back');
 
+        setInterval(function(){
+            counter++;
+            timer.innerHTML = `${counter} s`;
+        }, 1000)
+        
         // Displaying the cards on the HTML file according to the id number (vertically) .
         for (var i = 0; i < 16; i++) {
 

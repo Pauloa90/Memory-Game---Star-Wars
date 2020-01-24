@@ -9,6 +9,7 @@
     padding: 0;
 }
 
+
 body{
     background-color: #555;
     background: url('images/starwars.png');
@@ -23,28 +24,37 @@ h1{
     font-size: 7vh;
     margin: 0;
     margin-top: 2vh;
-    
 }
+
 .info-container{
     
     width: 50.5vh;
-    height: 8vh;
-    align-content: center;
+    height: 6vh;
     margin: auto;
     margin-top: 3vh;
     margin-bottom: 0;
     border-radius: 10px;
-    position: relative;  
-    text-align: left;
-
-    
+    text-align: justify;
 }
+
 h3{
     font-family: Star;
     font-size: 2vh;
     letter-spacing: 1px;
-    
     color: white;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}
+
+span{
+    font-family: Star;
+    font-size: 2vh;
+    letter-spacing: 1px;
+    color: white;
+    float: left;
+    margin: 10px;
+    padding: 10px;
 }
 #container{
     width: 50.5vh;
