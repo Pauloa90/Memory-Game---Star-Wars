@@ -20,7 +20,7 @@
     var counterf = 0
 
     //Score
-    score = 0
+    score = document.getElementById('score')
     
     // This structure will set an attribute “source” and “id” to each card and then, those
     // will be put into an array "image".
@@ -188,7 +188,13 @@
     
     // This function will reset all the parameters
     function gameOver() {
-        document.alert(`${score}`)
+        score = (matches*30000)/(counter*counterf)
+                    console.log(matches)
+                    console.log(counter)
+                    console.log(counterf)
+        console.log(score)
+        score.innerHTML = score
+
         // It pulls the message "Game Over" to the front of the page.
         modalGameOver.style.zIndex = 10;
 
