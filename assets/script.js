@@ -18,6 +18,9 @@
     var counter = 0
     var flips = document.getElementById('flips')
     var counterf = 0
+
+    //Score
+    score = 0
     
     // This structure will set an attribute “source” and “id” to each card and then, those
     // will be put into an array "image".
@@ -115,8 +118,11 @@
 
     // This function will flip the cards.
     function flipCard() {
+       
+        
         counterf++;
-        flips.innterHTML = counterf;
+        flips.innerHTML = counterf;
+        
         // This will verify if there are more than 2 cards flipped.
         if (flippedCards.length < 2) {
             var faces = this.getElementsByClassName('face');
@@ -152,6 +158,11 @@
                     //It empties the array of flipped cards.
                     flippedCards = [];
 
+                    score = (matches*30000)/(counter*counterf)
+                    console.log(matches)
+                    console.log(counter)
+                    console.log(counterf)
+
                     // When the number of matches is equal to 8, it will call the function "gameOver"
                     if(matches === 8){
                         gameOver();
@@ -173,10 +184,11 @@
         }
 
     }
-
-   
+    
+    
     // This function will reset all the parameters
     function gameOver() {
+        document.alert(`${score}`)
         // It pulls the message "Game Over" to the front of the page.
         modalGameOver.style.zIndex = 10;
 
@@ -199,6 +211,7 @@
 
         }, 1500);
     }
+    
 
 }());
 
