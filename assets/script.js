@@ -20,14 +20,16 @@
         var img = {
             src: "images/" + i + ".jpg",
             id: i % 8
+            
+
         }
         images.push(img);
     } console.log(images);
 
+    
 
     //That function calls the initialization of the game.
     startGame();
-
     function startGame() {
 
         //Reseting the counter.
@@ -71,7 +73,8 @@
             backFaces[i].classList.remove('flipped', 'match');
 
             //It adds an image to each card 
-            frontFaces[i].style.background = "url('assets/" + images[i].src + "')";
+            frontFaces[i].style.background = "url('assets/" + images[i].src + "')center";
+            frontFaces[i].style.backgroundSize = "cover";
             frontFaces[i].setAttribute("id", images[i].id);
 
         }
