@@ -17,6 +17,7 @@
     var timer = document.getElementById('timer')
     var counter = 0
     var flips = document.getElementById('flips')
+    var counterf = 0
     
     // This structure will set an attribute “source” and “id” to each card and then, those
     // will be put into an array "image".
@@ -114,6 +115,8 @@
 
     // This function will flip the cards.
     function flipCard() {
+        counterf++;
+        flips.innterHTML = counterf;
         // This will verify if there are more than 2 cards flipped.
         if (flippedCards.length < 2) {
             var faces = this.getElementsByClassName('face');
