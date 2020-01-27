@@ -120,7 +120,7 @@ h2{
 
 span{
     font-family: Star;
-    font-size: 1.vh;
+    font-size: 1.6vh;
     letter-spacing: 1px;
     color: white;
     float: left;
@@ -131,7 +131,7 @@ span{
     width: 50.5vh;
     height: 61vh;
     position: relative;
-    margin: 300px auto;
+    margin:auto;
     border-radius: 15px;   
     background:linear-gradient(to right,  #2d038f,  #726988);
     margin-top: 0;
@@ -213,12 +213,33 @@ img#modalGameOver{
     opacity: 1;
     z-index: -1;
 }
+
 .links{
-    background: blue;
-    
     width: 100%;
     height: 20vh;
     margin: auto;
+    font-size: 2vh;
+
 }
-i{
+
+.fa-linkedin, .fa-github, .fa-envelope {
+  color: white;
+  margin: 1.7vh;
+}
+
+
+.fa {
+  height: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 1.7vh;
+  background:#2d038f;
+  font-size: 30px;
+ 
+}
+
+.fa:hover{
+    opacity: 0.7;
 }
