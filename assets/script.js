@@ -1,7 +1,7 @@
 (function () {
     // This variable counts the number of matches up to 8 when the game ends.
     var matches = 0
-
+    
     // This Array will contain the objects with a source and id from 0 to 7.
     var images = [];
 
@@ -27,7 +27,7 @@
 
     // Get the <span> element that closes the modal
     var closeinstructions = document.getElementsByClassName("closeinstructions")[0];
-
+    
     // When the user clicks on the button, open the modal
     instructions.onclick = function() {
         modal.style.display = "block";
@@ -82,6 +82,7 @@
 
         setInterval(function(){
             counter++;
+
             timer.innerHTML = `${counter} s`;
         }, 1000)
         
@@ -227,6 +228,7 @@
 
         // It adds the event "clicl" to the image "Game Over"
         modalGameOver.addEventListener('click', startGame, false);
+        document.getElementById('modalmodal').showModal();
     }
 
     // This function will make a message come up when the cards matches.
