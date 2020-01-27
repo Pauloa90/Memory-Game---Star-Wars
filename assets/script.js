@@ -19,8 +19,8 @@
     var flips = document.getElementById('flips')
     var counterf = 0
 
-        // Get the modal
-    var modal = document.getElementById("myModal");
+        // MODAL INSTRUCTIONS
+    var modalinstructions = document.getElementById("modalinstructions");
 
     // Get the button that opens the modal
     var instructions = document.getElementById("instructions");
@@ -30,20 +30,49 @@
     
     // When the user clicks on the button, open the modal
     instructions.onclick = function() {
-        modal.style.display = "block";
+        modalinstructions.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
     closeinstructions.onclick = function() {
-     modal.style.display = "none";
+     modalinstructions.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target == modalinstructions) {
+            modalinstructions.style.display = "none";
         }
     }
+
+
+    // MODAL PLAY AGAIN
+    var modalplayagain = document.getElementById("modalplayagain");
+
+    // Get the button that opens the modal
+    var playagain = document.getElementById("playagain");
+
+    // Get the <span> element that closes the modal
+    var closeplayagain = document.getElementsByClassName("closeplayagain")[0];
+    
+    // When the user clicks on the button, open the modal
+    
+
+    // When the user clicks on <span> (x), close the modal
+    closeinstructions.onclick = function() {
+     modalinstructions.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modalinstructions) {
+            modalinstructions.style.display = "none";
+        }
+    }
+
+
+
+
 
 
     //Score
@@ -222,13 +251,12 @@
                     console.log(counterf)
         console.log(score)
         score.innerHTML = score
-
+        modalplayagain.style.display = "block";
         // It pulls the message "Game Over" to the front of the page.
         modalGameOver.style.zIndex = 10;
 
         // It adds the event "clicl" to the image "Game Over"
         modalGameOver.addEventListener('click', startGame, false);
-        document.getElementById('modalmodal').showModal();
     }
 
     // This function will make a message come up when the cards matches.
