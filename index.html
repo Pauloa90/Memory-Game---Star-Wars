@@ -8,9 +8,11 @@
 	<link href="assets/style.css" rel="stylesheet">
 	</link>
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
-	
+
+
 	<title>Star Wars</title>
 </head>
 
@@ -18,13 +20,31 @@
 	<h1 class="title">StarWars Memory Game</h1>
 
 	<div class="info-container">
+		<h3>Time</h3><span class="time" id="timer">60</span>
+		<h3>Flips</h3><span class="flips" id="flips">0</span>
+		<h3>Score</h3><span class="score" id="score">0</span>
 		
-        <h3>Time</h3><span class="time" id="timer">60</span>
-        <h3>Flips</h3><span class="flips" id="flips">0</span>
-        <h3>Score</h3><span class="score" id="score">0</span>
-		
+        <button id="instructions">Instructions</button>
+		<div id="myModal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+                <div class="modal-header">
+            
+				<span class="closeinstructions">&times;</span>
+                <h2>Instructions</h2>
+                
+				<p>Your goal is to match the cards accordingly.
+The player turns over two cards (one at a time), if they match, they are kept face up and the player can move on to the next two cards.
+When the player chooses two cards that do not match, they will be returned again in the same position they were in before.
+The less time and less movements the higher your score.</p>
+			    </div>
+            </div>
+
+		</div>
+
 	</div>
-    
+
 	<div id="container">
 		<div class="card" id="card0">
 			<div class="face back"></div>
@@ -90,13 +110,16 @@
 			<div class="face back"></div>
 			<div class="face front"></div>
 		</div>
-        <img src="assets/images/1.jpg" alt="macth" id="imgMatchSign">
+		<img src="assets/images/1.jpg" alt="macth" id="imgMatchSign">
 
 	</div>
-    <div id="modalGameOver">
-        
-    </div>
+
+		<div id="modalGameOver">
+
+		</div>
+
 </body>
 <script src="assets/script.js"></script>
+
 
 </html>
