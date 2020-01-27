@@ -54,9 +54,9 @@ h3{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.5vh;
+    font-size: 1.3vh;
     font-family: Star;
-    width: 14vh;
+    width: 12vh;
     height: 2vh;
     border-radius: 10px;
     margin-left: 3vh;
@@ -246,20 +246,19 @@ span{
 
 
 #playagain{
-    background:#fffefe;
+    background:#000000;
     border: none;
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 1.5vh;
     font-family: Star;
-    width: 14vh;
-    height: 2vh;
+    width: 16vh;
+    height: 5vh;
     border-radius: 10px;
     margin-left: 3vh;
-    
-    
+        
 }
 
 

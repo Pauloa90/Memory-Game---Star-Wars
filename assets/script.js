@@ -149,10 +149,10 @@
 
         }
         // It puts the Game Over Image at the very bacl of the HTML file.
-        modalGameOver.style.zIndex = "-2";
-
+       // modalGameOver.style.zIndex = "-2";
+        modalplayagain.style.display = "none";
         // It removes the event click from the Game Over image.
-        modalGameOver.removeEventListener('click', startGame, false);
+       // modalGameOver.removeEventListener('click', startGame, false);
     }
 
     // This function will shuffle the cards every time that the page is loaded.
@@ -253,10 +253,15 @@
         score.innerHTML = score
         modalplayagain.style.display = "block";
         // It pulls the message "Game Over" to the front of the page.
-        modalGameOver.style.zIndex = 10;
+        //modalGameOver.style.zIndex = 10;
+        playagain.addEventListener('click', startGame, false);
+        closeplayagain.addEventListener('click', startGame, false);
+        
+       
+        
 
         // It adds the event "clicl" to the image "Game Over"
-        modalGameOver.addEventListener('click', startGame, false);
+        //modalGameOver.addEventListener('click', startGame, false);
     }
 
     // This function will make a message come up when the cards matches.
