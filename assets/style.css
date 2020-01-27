@@ -213,3 +213,12 @@ img#modalGameOver{
     opacity: 1;
     z-index: -1;
 }
+.links{
+    background: blue;
+    
+    width: 100%;
+    height: 20vh;
+    margin: auto;
+}
+i{
+}
