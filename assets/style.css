@@ -39,7 +39,7 @@ h1{
 
 h3{
     font-family: Star;
-    font-size: 1.6vh;
+    font-size: 1.3vh;
     letter-spacing: 1px;
     color: white;
     float: left;
@@ -156,7 +156,7 @@ span{
 }
 
 .match{
-    box-shadow: 10px 10px 10px #c00cc0;
+    box-shadow: 10px 10px 10px #1b3075;
 }
 
 .face{

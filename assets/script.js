@@ -16,8 +16,18 @@
 
     var timer = document.getElementById('timer')
     var counter = 0
+
     var flips = document.getElementById('flips')
     var counterf = 0
+
+    var score = document.getElementById('score')
+    scorepoints = 0
+
+    
+    var bestscore = document.getElementById('bestscore')
+    
+    var instructions = document.getElementById('instructions')
+
     var interval = null
         // MODAL INSTRUCTIONS
     var modalinstructions = document.getElementById("modalinstructions");
@@ -77,7 +87,7 @@
 
 
     //Score
-    score = document.getElementById('score')
+    
     
     // This structure will set an attribute “source” and “id” to each card and then, those
     // will be put into an array "image".
@@ -100,6 +110,9 @@
         counter = 0;
         counterf = 0;
         flips.innerHTML = counterf;
+
+        
+
         //Reseting the counter.
         matches = 0;
 
@@ -223,10 +236,11 @@
                     //It empties the array of flipped cards.
                     flippedCards = [];
 
-                    score = (matches*30000)/(counter*counterf)
+                    scorepoints = (matches*30000)/(counter*counterf)
                     console.log(matches)
                     console.log(counter)
                     console.log(counterf)
+                    
 
                     // When the number of matches is equal to 8, it will call the function "gameOver"
                     if(matches === 8){
@@ -253,13 +267,15 @@
     
     // This function will reset all the parameters
     function gameOver() {
-        score = (matches*30000)/(counter*counterf)
+        
+        scorepoints = (matches*30000)/(counter*counterf)
                     console.log(matches)
                     console.log(counter)
                     console.log(counterf)
         console.log(score)
+        score.innerHTML = `${parseInt(scorepoints)}`
+        bestscore.innerHTML = `Best Score:`
 
-        score.innerHTML = score
         modalplayagain.style.display = "block";
         // It pulls the message "Game Over" to the front of the page.
         //modalGameOver.style.zIndex = 10;
@@ -267,10 +283,10 @@
         playagain.addEventListener('click', StopTimer, false);
         closeplayagain.addEventListener('click', startGame, false);
         closeplayagain.addEventListener('click', StopTimer, false);
-
+        instructions.style.display = "none";
         function StopTimer(){
             clearInterval(interval)
-            alert('reseting timer')
+        
         }
             
 
