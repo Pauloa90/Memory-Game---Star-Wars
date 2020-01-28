@@ -113,7 +113,7 @@
         var frontFaces = document.getElementsByClassName('front');
         var backFaces = document.getElementsByClassName('back');
         
-        var interval = setInterval(ValueCount, 1000);
+       interval = setInterval(ValueCount, 1000);
         
         function ValueCount(){
             counter++;
