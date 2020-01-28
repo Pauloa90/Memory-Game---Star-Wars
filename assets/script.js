@@ -24,11 +24,15 @@
     scorepoints = 0
 
     
+    
     var bestscore = document.getElementById('bestscore')
     
     var instructions = document.getElementById('instructions')
 
+
+    arrayscore = [];
     var interval = null
+
         // MODAL INSTRUCTIONS
     var modalinstructions = document.getElementById("modalinstructions");
 
@@ -273,8 +277,8 @@
                     console.log(counter)
                     console.log(counterf)
         console.log(score)
-        score.innerHTML = `${parseInt(scorepoints)}`
-        bestscore.innerHTML = `Best Score:`
+        scorepoints = parseInt(scorepoints)
+       
 
         modalplayagain.style.display = "block";
         // It pulls the message "Game Over" to the front of the page.
@@ -283,17 +287,26 @@
         playagain.addEventListener('click', StopTimer, false);
         closeplayagain.addEventListener('click', startGame, false);
         closeplayagain.addEventListener('click', StopTimer, false);
+        
         instructions.style.display = "none";
         function StopTimer(){
             clearInterval(interval)
         
         }
             
-
+        arrayscore.push(scorepoints)
         
-       
-        
+       console.log(arrayscore)
+        let maxscore = arrayscore[0];
+        let minscore = arrayscore[0];
 
+        for (var player in arrayscore){
+            if (arrayscore[player] > maxscore){
+                maxscore = arrayscore[player]
+            }
+        }
+        score.innerHTML = `${maxscore}`
+        bestscore.innerHTML = `Best Score:`
         // It adds the event "clicl" to the image "Game Over"
         //modalGameOver.addEventListener('click', startGame, false);
     }
