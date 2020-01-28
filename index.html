@@ -12,16 +12,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-
-
-
 	<title>Star Wars</title>
 </head>
 
 <body>
+
 	<h1 class="title">StarWars Memory Game</h1>
 
+    <!-- Container with Timer, Score, Flips and Instructions -->
 	<div class="info-container">
 		<h3>Time</h3><span class="time" id="timer">60</span>
 		<h3>Flips</h3><span class="flips" id="flips">0</span>
@@ -45,11 +43,10 @@
 						The less time and less movements the higher your score.</p>
 				</div>
 			</div>
-
 		</div>
-
 	</div>
 
+    <!-- This container will have all the cards of the game displayed -->
 	<div id="container">
 		<div class="card" id="card0">
 			<div class="face back"></div>
@@ -116,36 +113,26 @@
 			<div class="face front"></div>
 		</div>
 
+        <!-- Modal shown when the game is over -->
         <div id="modalplayagain" class="modal">
             <div class="modal-content">
                 <span class="closeplayagain">&times;</span>
-                <h2>Congratulatios! May the Fourth Be With You!</h2>
+                <h2>Congratulatios! May the Force Be With You!</h2>
 
                 <p>Let's try again?</p>
                 <button id="playagain">Play again!</button>
             </div>
         </div>
+
 	</div>
+
+    <!-- Div with social media links and contact me -->
     <div class="links">
         <a href="https://www.linkedin.com/in/paulo-albuquerque-2a56673b/" class="fa fa-linkedin"
             target='_blank'></a>
         <a href="https://github.com/Pauloa90" class="fa fa-github" target='_blank'></a>
         <a href="#" class="fa fa-envelope" target='_blank'></a>
-
     </div>
-        <!--
-		<div id="modalGameOver">
-			<img src="assets/images/modal.png" alt="match" id="imgGameOver">
-		</div>-->
-			<img src="assets/images/1.jpg" alt="macth" id="imgMatchSign">
-
-	
-    
-
-
-
 </body>
 <script src="assets/script.js"></script>
-
-
 </html>

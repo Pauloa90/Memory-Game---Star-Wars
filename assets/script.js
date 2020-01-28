@@ -1,4 +1,7 @@
 (function () {
+    //On this section I defnied all variables that I will need before the game starts//
+
+
     // This variable counts the number of matches up to 8 when the game ends.
     var matches = 0
     
@@ -8,12 +11,7 @@
     // This array will contain cards that are flipped.
     var flippedCards = [];
 
-    // This will target an image saying that the game is over.
-    var modalGameOver = document.querySelector("#modalGameOver")
-
-    // This variable will target an image to show when the players matches 2 cards.
-    var imgMatchSign = document.querySelector('#imgMatchSign')
-
+    // These variables will target the piece of information to be displayed (Timer, Score and Flips and Button - Instructions))
     var timer = document.getElementById('timer')
     var counter = 0
 
@@ -22,33 +20,20 @@
 
     var score = document.getElementById('score')
     scorepoints = 0
-
-    
-    
     var bestscore = document.getElementById('bestscore')
-    
-    var instructions = document.getElementById('instructions')
-
-
     arrayscore = [];
-    var interval = null
 
-        // MODAL INSTRUCTIONS
+    // Targeting modal Instructions
     var modalinstructions = document.getElementById("modalinstructions");
-
-    // Get the button that opens the modal
-    var instructions = document.getElementById("instructions");
-
-    // Get the <span> element that closes the modal
+    var instructions = document.getElementById('instructions')
     var closeinstructions = document.getElementsByClassName("closeinstructions")[0];
-    
+
     // When the user clicks on the button, open the modal
     instructions.onclick = function() {
         modalinstructions.style.display = "block";
     }
 
-
-    // When the user clicks on <span> (x), close the modal
+    // When the user clicks on <span> (x), it closes the modal
     closeinstructions.onclick = function() {
      modalinstructions.style.display = "none";
     }
@@ -60,19 +45,14 @@
         }
     }
 
+    var interval = null
 
-    // MODAL PLAY AGAIN
+    
+    // Targeting modal Play Again
     var modalplayagain = document.getElementById("modalplayagain");
-
-    // Get the button that opens the modal
     var playagain = document.getElementById("playagain");
-
-    // Get the <span> element that closes the modal
     var closeplayagain = document.getElementsByClassName("closeplayagain")[0];
     
-    // When the user clicks on the button, open the modal
-    
-
     // When the user clicks on <span> (x), close the modal
     closeinstructions.onclick = function() {
      modalinstructions.style.display = "none";
@@ -84,14 +64,7 @@
             modalinstructions.style.display = "none";
         }
     }
-
-
-
-
-
-
-    //Score
-    
+   
     
     // This structure will set an attribute “source” and “id” to each card and then, those
     // will be put into an array "image".
@@ -99,25 +72,18 @@
         var img = {
             src: "images/" + i + ".jpg",
             id: i % 8
-            
-
         }
         images.push(img);
     } console.log(images);
 
     
-
     //That function calls the initialization of the game.
     startGame();
     function startGame() {
-         
+        //The timer and Flips Counter will be reset
         counter = 0;
         counterf = 0;
-        flips.innerHTML = counterf;
-
-        
-
-        //Reseting the counter.
+        flips.innerHTML = counterf;     
         matches = 0;
 
         //This command will shuffle the cards.
@@ -130,13 +96,12 @@
         var frontFaces = document.getElementsByClassName('front');
         var backFaces = document.getElementsByClassName('back');
         
+        //This function will increase the second in "1"
        interval = setInterval(ValueCount, 1000);
         
         function ValueCount(){
             counter++;
             timer.innerHTML = `${counter} s`;
-            
-
         }
 
        
@@ -153,16 +118,16 @@
             } else {
                 card.style.top = 46 + 'vh'
             }
+
             // Displaying the cards on the HTML file according to the id number (horizontally) .
             if (i)
                 card.style.left = i === 0 || i === 4 || i === 8 || i === 12 ? 2 + 'vh' : i % 4 * 12 + 2 + 'vh';
             
-                // on click cards will  answer to function called to flip the cards
+            // on click cards will  answer to function called to flip the cards
             card.addEventListener('click', flipCard, false);
-
-
         }
-        // It takes "match" and "flipped" class from the targeted cards.
+
+        // It takes "match" and "flipped" classes from the targeted cards.
         for (var i = 0; i < 16; i++) {
             frontFaces[i].classList.remove('flipped', 'match');
             backFaces[i].classList.remove('flipped', 'match');
@@ -171,17 +136,15 @@
             frontFaces[i].style.background = "url('assets/" + images[i].src + "')center";
             frontFaces[i].style.backgroundSize = "cover";
             frontFaces[i].setAttribute("id", images[i].id);
-
         }
-        // It puts the Game Over Image at the very bacl of the HTML file.
-       // modalGameOver.style.zIndex = "-2";
+
+       //It will make the modal game over disappear
         modalplayagain.style.display = "none";
-        // It removes the event click from the Game Over image.
-       // modalGameOver.removeEventListener('click', startGame, false);
     }
 
     // This function will shuffle the cards every time that the page is loaded.
     function randomSort(oldArray) {
+
         //It will create an empty array.
         var newArray = [];
 
@@ -197,11 +160,10 @@
         return newArray;
     }
 
-
     // This function will flip the cards.
     function flipCard() {
        
-        
+        //For every click, the flips counter will be increased by one.
         counterf++;
         flips.innerHTML = counterf;
         
@@ -223,28 +185,28 @@
 
             //It verifes if the number of flipped cards is 2.
             if(flippedCards.length === 2){
+
                 // It verifies if the cards have the same id.
+
                 if(flippedCards[0].childNodes[3.].id === flippedCards[1].childNodes[3].id){
+
                     // If the cards match a class "match" will be added to them.
                     flippedCards[0].childNodes[1].classList.toggle('match');
                     flippedCards[0].childNodes[3].classList.toggle('match');
                     flippedCards[1].childNodes[1].classList.toggle('match');
                     flippedCards[1].childNodes[3].classList.toggle('match'); 
                     
-                    //It calls the function showing the Match message.
-                    matchCardSign();
+                    
+                    
 
                     // It increases the counter in one.
                     matches++;
 
                     //It empties the array of flipped cards.
                     flippedCards = [];
-
-                    scorepoints = (matches*30000)/(counter*counterf)
-                    console.log(matches)
-                    console.log(counter)
-                    console.log(counterf)
                     
+                    //Score logic
+                    scorepoints = (matches*30000)/(counter*counterf)       
 
                     // When the number of matches is equal to 8, it will call the function "gameOver"
                     if(matches === 8){
@@ -276,17 +238,18 @@
                     console.log(matches)
                     console.log(counter)
                     console.log(counterf)
-        console.log(score)
+        
         scorepoints = parseInt(scorepoints)
        
-
+        //The modal game over appears
         modalplayagain.style.display = "block";
-        // It pulls the message "Game Over" to the front of the page.
-        //modalGameOver.style.zIndex = 10;
+
+        
         playagain.addEventListener('click', startGame, false);
         playagain.addEventListener('click', StopTimer, false);
         closeplayagain.addEventListener('click', startGame, false);
         closeplayagain.addEventListener('click', StopTimer, false);
+        
         
         instructions.style.display = "none";
         function StopTimer(){
@@ -311,21 +274,8 @@
         //modalGameOver.addEventListener('click', startGame, false);
     }
 
-    // This function will make a message come up when the cards matches.
-    function matchCardSign() {
-        // It brings the message/image to the front.
-        imgMatchSign.style.zIndex = 1;
-        imgMatchSign.style.top = 150 + 'px';
-        imgMatchSign.style.opacity = 0;
-        // This function will make the message last just 1.5 second and go back to the back
-        // the html file.
-        setTimeout(function(){  
-            imgMatchSign.style.zIndex = -1;
-            imgMatchSign.style.top = 250 + 'px';
-            imgMatchSign.style.opacity = 1;
-
-        }, 1500);
-    }
+    
+    
     
 
 }());
