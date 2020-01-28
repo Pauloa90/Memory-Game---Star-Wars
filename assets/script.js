@@ -18,7 +18,7 @@
     var counter = 0
     var flips = document.getElementById('flips')
     var counterf = 0
-
+    var interval = null
         // MODAL INSTRUCTIONS
     var modalinstructions = document.getElementById("modalinstructions");
 
@@ -32,6 +32,7 @@
     instructions.onclick = function() {
         modalinstructions.style.display = "block";
     }
+
 
     // When the user clicks on <span> (x), close the modal
     closeinstructions.onclick = function() {
@@ -95,7 +96,10 @@
     //That function calls the initialization of the game.
     startGame();
     function startGame() {
-
+         
+        counter = 0;
+        counterf = 0;
+        flips.innerHTML = counterf;
         //Reseting the counter.
         matches = 0;
 
@@ -108,13 +112,17 @@
         //Targeting elements div with "back" and "front" as a class.
         var frontFaces = document.getElementsByClassName('front');
         var backFaces = document.getElementsByClassName('back');
-
-        setInterval(function(){
-            counter++;
-
-            timer.innerHTML = `${counter} s`;
-        }, 1000)
         
+        var interval = setInterval(ValueCount, 1000);
+        
+        function ValueCount(){
+            counter++;
+            timer.innerHTML = `${counter} s`;
+            
+
+        }
+
+       
         // Displaying the cards on the HTML file according to the id number (vertically) .
         for (var i = 0; i < 16; i++) {
 
@@ -250,12 +258,22 @@
                     console.log(counter)
                     console.log(counterf)
         console.log(score)
+
         score.innerHTML = score
         modalplayagain.style.display = "block";
         // It pulls the message "Game Over" to the front of the page.
         //modalGameOver.style.zIndex = 10;
         playagain.addEventListener('click', startGame, false);
+        playagain.addEventListener('click', StopTimer, false);
         closeplayagain.addEventListener('click', startGame, false);
+        closeplayagain.addEventListener('click', StopTimer, false);
+
+        function StopTimer(){
+            clearInterval(interval)
+            alert('reseting timer')
+        }
+            
+
         
        
         

@@ -155,8 +155,8 @@ span{
     transition: .5s;
 }
 
-.face.flipped.match{
-    box-shadow: 10px 10px 10px #c00d0d;
+.match{
+    box-shadow: 10px 10px 10px #c00cc0;
 }
 
 .face{
