@@ -326,21 +326,20 @@ input[type=submit] {
     background-color: rgb(0, 0, 0);
     color: white;
     padding: 12px 20px;
-    border: none;
+    border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
     font-family: Star;
     font-size: 1.5vh;
     display: inline-block;  
+    transition: .5s ease;
 }
 input[type=submit]:hover{
     background-color: white;
     color: rgb(15, 15, 15);
+    border: 1px solid black;
 }
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: #45a049;
-}
 
 /* Add a background color and some padding around the form */
 .container {
