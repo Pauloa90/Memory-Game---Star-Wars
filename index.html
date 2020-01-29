@@ -119,7 +119,7 @@
                 <span class="closeplayagain">&times;</span>
                 <h2>Congratulatios! May the Force Be With You!</h2>
 
-                <p>Let's try again?</p>
+                <p id="tryagain"></p>
                 <button id="playagain">Play again!</button>
             </div>
         </div>
@@ -131,7 +131,25 @@
         <a href="https://www.linkedin.com/in/paulo-albuquerque-2a56673b/" class="fa fa-linkedin"
             target='_blank'></a>
         <a href="https://github.com/Pauloa90" class="fa fa-github" target='_blank'></a>
-        <a href="#" class="fa fa-envelope" target='_blank'></a>
+        <a href="#" class="fa fa-envelope" target='_blank' id="contactbutton"></a>
+
+        <!-- Modal Contact me-->
+        <div id="modalcontact">
+				<form class="modalcontactcontent">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                    <input type="submit" value="Submit">                    
+
+				</form>
+			</div>
+		</div>
     </div>
 </body>
 <script src="assets/script.js"></script>

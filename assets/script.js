@@ -8,6 +8,7 @@
     // This Array will contain the objects with a source and id from 0 to 7.
     var images = [];
 
+
     // This array will contain cards that are flipped.
     var flippedCards = [];
 
@@ -27,6 +28,13 @@
     var modalinstructions = document.getElementById("modalinstructions");
     var instructions = document.getElementById('instructions')
     var closeinstructions = document.getElementsByClassName("closeinstructions")[0];
+
+
+    var contactbutton = document.getElementById('contactbutton')
+    var modalcontact = document.getElementById('modalcontact')
+    contactbutton.onclick = function() {
+     modalcontact.style.display = "block";
+    }
 
     // When the user clicks on the button, open the modal
     instructions.onclick = function() {
@@ -52,7 +60,8 @@
     var modalplayagain = document.getElementById("modalplayagain");
     var playagain = document.getElementById("playagain");
     var closeplayagain = document.getElementsByClassName("closeplayagain")[0];
-    
+    var tryagain = document.getElementById('tryagain')
+
     // When the user clicks on <span> (x), close the modal
     closeinstructions.onclick = function() {
      modalinstructions.style.display = "none";
@@ -243,6 +252,7 @@
        
         //The modal game over appears
         modalplayagain.style.display = "block";
+        tryagain.innerHTML = `<p>Your Score is <strong>${scorepoints}!</strong> Let's try again? </p>`
 
         
         playagain.addEventListener('click', startGame, false);
