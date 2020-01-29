@@ -11,7 +11,14 @@
 	<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function(){
+      emailjs.init("user_3TbdfqZHg5YrQJmYmVA4x");
+      
+   })();
+	</script>
 	<title>Star Wars</title>
 </head>
 
@@ -19,7 +26,7 @@
 
 	<h1 class="title">StarWars Memory Game</h1>
 
-    <!-- Container with Timer, Score, Flips and Instructions -->
+	<!-- Container with Timer, Score, Flips and Instructions -->
 	<div class="info-container">
 		<h3>Time</h3><span class="time" id="timer">60</span>
 		<h3>Flips</h3><span class="flips" id="flips">0</span>
@@ -46,7 +53,7 @@
 		</div>
 	</div>
 
-    <!-- This container will have all the cards of the game displayed -->
+	<!-- This container will have all the cards of the game displayed -->
 	<div id="container">
 		<div class="card" id="card0">
 			<div class="face back"></div>
@@ -113,44 +120,45 @@
 			<div class="face front"></div>
 		</div>
 
-        <!-- Modal shown when the game is over -->
-        <div id="modalplayagain" class="modal">
-            <div class="modal-content">
-                <span class="closeplayagain">&times;</span>
-                <h2>Congratulatios! May the Force Be With You!</h2>
+		<!-- Modal shown when the game is over -->
+		<div id="modalplayagain" class="modal">
+			<div class="modal-content">
+				<span class="closeplayagain">&times;</span>
+				<h2>Congratulatios! May the Force Be With You!</h2>
 
-                <p id="tryagain"></p>
-                <button id="playagain">Play again!</button>
-            </div>
-        </div>
+				<p id="tryagain"></p>
+				<button id="playagain">Play again!</button>
+			</div>
+		</div>
 
 	</div>
 
-    <!-- Div with social media links and contact me -->
-    <div class="links">
-        <a href="https://www.linkedin.com/in/paulo-albuquerque-2a56673b/" class="fa fa-linkedin"
-            target='_blank'></a>
-        <a href="https://github.com/Pauloa90" class="fa fa-github" target='_blank'></a>
-        <a href="#" class="fa fa-envelope"  id="contactbutton"></a>
+	<!-- Div with social media links and contact me -->
+	<div class="links">
+		<a href="https://www.linkedin.com/in/paulo-albuquerque-2a56673b/" class="fa fa-linkedin" target='_blank'></a>
+		<a href="https://github.com/Pauloa90" class="fa fa-github" target='_blank'></a>
+		<a href="#" class="fa fa-envelope" id="contactbutton"></a>
 
-        <!-- Modal Contact me-->
-        <div id="modalcontact">
-				<form class="modalcontactcontent">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+		<!-- Modal Contact me-->
+		<div id="modalcontact">
+			<form class="modalcontactcontent" onsubmit="return sendMail(this)" method="POST">
+				<label for="name">Name</label>
+				<input type="text" id="fname" name="name" placeholder="Your name..">
 
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" placeholder="Your email">
 
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+				<label for="subject">Subject</label>
+				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-                    <input type="submit" value="Submit">                    
+				<input type="submit" value="Submit">
 
 				</form>
-			</div>
 		</div>
-    </div>
+	</div>
+	</div>
+    <script src="assets/sendEmail.js"></script>
 </body>
 <script src="assets/script.js"></script>
+
 </html>
