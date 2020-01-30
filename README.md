@@ -1,75 +1,67 @@
 # Star Wars Memory Game
 Interactive Frontend Development Milestone Project 
 
-Ivan Ray is one of the best Personal Trainers in Dublin. He has started his career three years ago as a PT but he
-hasn’t got a website where he can reach more clients. The project comes up as a possible new Ivan’s website where
-his prospective clients can get in contact with him and get to know more about Ivan and his methodology.
+This project was design to show my skills using Javascript and make the user interact with the webpage. 
+A memory game was made for many benefits that it can bring to the users.
+It has been proven that memory games help to enhance other brain functions and it stimulates peoples mind. Besides this exercise increases short memory and improves creativity.
+
+
 
 ## User eXperience Project
-Ivan as a professional can expect from this website reach more clients and clients can expect get in contact with Ivan
-easily and also get to know Ivan’s methodology.
+As a student of Software Development I want to show my abilities with Javascript and make users experience a page with a interactive frontend development in a fun way.
+And apart from th
+
 
 ## Demo
 
-Please check the links to see a screenshot of each section.
+Please check the link to see a screenshot of each section.
 
-A live demo can be found [here](https://pauloa90.github.io/IvanRay-Personal-Trainer/)
+[Game Webpage](https://github.com/Pauloa90/Memory-Game---Star-Wars/blob/master/assets/images/screenshot/memorygame.PNG) <br/>
+[Game Webpage on Mobile](https://github.com/Pauloa90/Memory-Game---Star-Wars/blob/master/assets/images/screenshot/memorygamemobile.PNG) <br/>
+[Modal instructions](https://github.com/Pauloa90/Memory-Game---Star-Wars/blob/master/assets/images/screenshot/instructions.PNG) <br/>
+[Modal Contact](https://github.com/Pauloa90/Memory-Game---Star-Wars/blob/master/assets/images/screenshot/memorycontact.PNG) <br/>
 
-[Home](https://github.com/Pauloa90/Ivan-Personal-Trainer/blob/master/assets/screenshots/Home.PNG)
-
-[About me](https://github.com/Pauloa90/Ivan-Personal-Trainer/blob/master/assets/screenshots/About.PNG)
-
-[Set your goal](https://github.com/Pauloa90/Ivan-Personal-Trainer/blob/master/assets/screenshots/Set.PNG)
-
-[Contact me](https://github.com/Pauloa90/Ivan-Personal-Trainer/blob/master/assets/screenshots/Contact.PNG)
+A live demo can be found [here](https://pauloa90.github.io/Memory-Game---Star-Wars/)
 
 
 ## Strategy
-My strategy from scratch is to keep the website simple but functional.
-Easy to access with only one page where users don’t have to open new tags in order to see something placed on the
-website.
+
+My strategy was to keep the game simple but funcitonal and fun. More fucntions were added in order to make the game more exciting such as "best score".
+
 
 ## Structure
 
-[Ivan Ray/About Me - wireframe](https://github.com/Pauloa90/Ivan-Personal-Trainer/blob/master/assets/wireframes/home.jpeg) <br/>
+[Game Webpage - wireframe](https://github.com/Pauloa90/Memory-Game---Star-Wars/blob/master/assets/images/wireframes/wireframe1.jpeg) <br/>
 
-[Set your goal/Contact - wireframe](https://github.com/Pauloa90/Ivan-Personal-Trainer/blob/master/assets/wireframes/contact.jpeg) <br/>
+[Skeleton - wireframe](https://github.com/Pauloa90/Memory-Game---Star-Wars/blob/master/assets/images/wireframes/wireframe2.jpeg) <br/>
 
 
 
 ## Skeleton
-The skeleton of the project was designed giving a specific Id to each section in order to quick acess each one of
-them.
+The webpage is a single section with 3 minors div inside the body in the html file.
 
-### Section 1 – Home
-Here the Section provides a carousel with 3 pictures giving the idea of movement and activity.
+### Info Game
+This section provides information about the game such as time, flips and score. I also added a button "instructions" as good practses.
 
-### Section 2 – About me
-In this section the prospective client will get to know bit more of Ivan and what is Ivan’s intention.
-Be sure which goal they have to set for regarding the client and client’s goals.
+### Container
+In this section all cards will be displayed accordingly. This division makes the way of displaying the cards better and more organized.
+In this area the user will click the card in order to flip them.
 
-### Section 3 – Set your goal
-Here the prospective clients will have an idea of where they have to start from and from there they can in contact
-with Ivan Ray in order to set a fitness plan.
-
-### Section 4 – Contact
-From this section prospective clients will have the chance to fill up a form and wait for Ivan to get in contact with
-them. Basic information will be required from the potential clients.
+### Links
+Here the user will have acess to my LinkedIn, GitHub and a form to contact through icons displayed inder the container with the cards.
 
 ## Surface
-As mentioned previously, a carousel was used on the main and first section to give the idea of movement and
-activity. For mobiles a call out will show up skipping straight to contact me section for those who already know Ivan
-Ray.
-Colours like gray, white and dark gray were used to give a good effect highlighting the fitness subject.
-HTML, CSS and Bootstrap (version 4.4) were used in order to bring this project to light.
-This webpage used the scrollSpay and “smooth scrolling” to give a nice effect when the user is changing the section.
-Also the Navbar will be collapsed when the screen changes the size to medium or small size. That will make the
-Navbar look modern and a clean design to the site.
+Having StarWars as the theme of the memory game a image of the galaxy was set as a background occupiyng 100% of the user's screen.
+Colors such purple white and black connects the user to the subject chosen. Also if the user hover over the card a shadow box will appear with the color of the lightsaber green from the movies.
+HTML5, CSS3 and Javascript were users in order to bring this project to ligth.
+No Navbar was needed as it is a single section page.
+Over the icon links (GitHub, LinkedIn and Contact) the user will see the opcacity changing and giving more motion to the page.
 
-## Features to be implemented
-Ivan hasn’t got video where he will explain types of work outs for specific goals. For now videos related to the subject were linked to the cards bringing the potential clients to hear something about every topic. 
 
 ## Testing
+
+
+
 
 Prospective clients trying to find a good personal trainer in Dublin will access the site through Internet search engines.
 First, they will see a navigation bar at the top, where you can take them to any section of the site, and below a 
