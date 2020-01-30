@@ -59,6 +59,15 @@ Over the icon links (GitHub, LinkedIn and Contact) the user will see the opcacit
 
 
 ## Testing
+Users that want to try a fun game using Javascript can acess my page on GitHub. The timer will start as soon as the page is loaded.
+The user can refresh the page if they wish to reset the timer so. Every time that the user click on a card the number of flips will increase by one.
+A button with the instructions to play is presented on the right side. If clicked a modal will pop up the instructions of how to play. If the player has played once, the button will disappear.
+The reason why is that is undestanding tha the player know how to play already.
+The best score will be shown. A comparative will be made on Javascript and just the highiest number will appear in order to keep the player motivateded to beat their own score.
+When the user hovers over a card, a shadow with lightgreen will appear around the cards. That will bring the StarWards identity to the gamme. Also in order to do it so the face of the cards
+are StarWars characters.
+The user will chose two cards, if they match they will remain with the face 
+characters
 
 
 
