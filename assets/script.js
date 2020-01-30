@@ -10,7 +10,7 @@
 
 
     // This array will contain cards that are flipped.
-    var flippedCards = [];
+    var turnedcards = [];
 
     // These variables will target the piece of information to be displayed (Timer, Score and Flips and Button - Instructions))
     var timer = document.getElementById('timer')
@@ -117,8 +117,8 @@
         images = randomSort(images);
 
         //This will empty the array with flipped cards.
-        flippedCards = [];
-
+        turnedcards = [];
+        
         //Targeting elements div with "back" and "front" as a class.
         var frontFaces = document.getElementsByClassName('front');
         var backFaces = document.getElementsByClassName('back');
@@ -151,7 +151,7 @@
                 card.style.left = i === 0 || i === 4 || i === 8 || i === 12 ? 2 + 'vh' : i % 4 * 12 + 2 + 'vh';
 
             // on click cards will  answer to function called to flip the cards
-            card.addEventListener('click', flipCard, false);
+            card.addEventListener('click', turncard, false);
         }
 
         // It takes "match" and "flipped" classes from the targeted cards.
@@ -188,14 +188,14 @@
     }
 
     // This function will flip the cards.
-    function flipCard() {
+    function turncard() {
 
         //For every click, the flips counter will be increased by one.
         counterf++;
         flips.innerHTML = counterf;
 
         // This will verify if there are more than 2 cards flipped.
-        if (flippedCards.length < 2) {
+        if (turnedcards.length < 2) {
             var faces = this.getElementsByClassName('face');
 
             // That condition will check if the card is alreade flipped.
@@ -208,20 +208,20 @@
             faces[1].classList.toggle('flipped');
 
             //That function will put the card clicked into the array of flipped cards.
-            flippedCards.push(this);
+            turnedcards.push(this);
 
             //It verifes if the number of flipped cards is 2.
-            if (flippedCards.length === 2) {
+            if (turnedcards.length === 2) {
 
                 // It verifies if the cards have the same id.
 
-                if (flippedCards[0].childNodes[3.].id === flippedCards[1].childNodes[3].id) {
+                if (turnedcards[0].childNodes[3.].id === turnedcards[1].childNodes[3].id) {
 
                     // If the cards match a class "match" will be added to them.
-                    flippedCards[0].childNodes[1].classList.toggle('match');
-                    flippedCards[0].childNodes[3].classList.toggle('match');
-                    flippedCards[1].childNodes[1].classList.toggle('match');
-                    flippedCards[1].childNodes[3].classList.toggle('match');
+                    turnedcards[0].childNodes[1].classList.toggle('match');
+                    turnedcards[0].childNodes[3].classList.toggle('match');
+                    turnedcards[1].childNodes[1].classList.toggle('match');
+                    turnedcards[1].childNodes[3].classList.toggle('match');
 
 
 
@@ -230,7 +230,7 @@
                     matches++;
 
                     //It empties the array of flipped cards.
-                    flippedCards = [];
+                    turnedcards = [];
 
                     //Score logic
                     scorepoints = (matches * 30000) / (counter * counterf)
@@ -246,13 +246,13 @@
         } else {
 
             // This condition will make the third click flip the cards in case they dont match.
-            flippedCards[0].childNodes[1].classList.toggle('flipped');
-            flippedCards[0].childNodes[3].classList.toggle('flipped');
-            flippedCards[1].childNodes[1].classList.toggle('flipped');
-            flippedCards[1].childNodes[3].classList.toggle('flipped');
+            turnedcards[0].childNodes[1].classList.toggle('flipped');
+            turnedcards[0].childNodes[3].classList.toggle('flipped');
+            turnedcards[1].childNodes[1].classList.toggle('flipped');
+            turnedcards[1].childNodes[3].classList.toggle('flipped');
 
             //It empties the array of flipped cards.
-            flippedCards = [];
+            turnedcards = [];
         }
 
     }
@@ -301,11 +301,6 @@
         // It adds the event "clicl" to the image "Game Over"
         //modalGameOver.addEventListener('click', startGame, false);
     }
-
-
-
-
-
 }());
 
 

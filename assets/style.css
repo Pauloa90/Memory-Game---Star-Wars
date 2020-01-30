@@ -160,6 +160,7 @@ span{
 /*This class will be add to matched cards  */
 .match{
     box-shadow: 10px 10px 10px #af1d49;
+    background: pink;
 }
 
 /*Styling cards (face and back) and giving the effect of rotating on Y-axis */
