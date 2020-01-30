@@ -4,7 +4,7 @@
 
     // This variable counts the number of matches up to 8 when the game ends.
     var matches = 0
-    
+
     // This Array will contain the objects with a source and id from 0 to 7.
     var images = [];
 
@@ -30,32 +30,49 @@
     var closeinstructions = document.getElementsByClassName("closeinstructions")[0];
 
 
-    var contactbutton = document.getElementById('contactbutton')
-    var modalcontact = document.getElementById('modalcontact')
-    contactbutton.onclick = function() {
-     modalcontact.style.display = "block";
-    }
+
 
     // When the user clicks on the button, open the modal
-    instructions.onclick = function() {
+    instructions.onclick = function () {
         modalinstructions.style.display = "block";
     }
 
     // When the user clicks on <span> (x), it closes the modal
-    closeinstructions.onclick = function() {
-     modalinstructions.style.display = "none";
+    closeinstructions.onclick = function () {
+        modalinstructions.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == modalinstructions) {
             modalinstructions.style.display = "none";
         }
     }
 
     var interval = null
-
+    var submit = document.getElementById('submit')
+    var contactbutton = document.getElementById('contactbutton')
+    var modalcontactid = document.getElementById('modalcontactid')
+    var contactForm = document.getElementById('contactForm')
     
+
+    contactbutton.onclick = function () {
+        modalcontactid.style.display = "block";
+    }
+
+    submit.onclick = function () {
+        modalcontactid.style.display = "none";
+        
+    }
+
+     window.onclick = function (event) {
+        if (event.target == modalcontactid) {
+            modalcontactid.style.display = "none";
+        }
+    }
+   
+    
+
     // Targeting modal Play Again
     var modalplayagain = document.getElementById("modalplayagain");
     var playagain = document.getElementById("playagain");
@@ -63,18 +80,19 @@
     var tryagain = document.getElementById('tryagain')
 
     // When the user clicks on <span> (x), close the modal
-    closeinstructions.onclick = function() {
-     modalinstructions.style.display = "none";
+    closeinstructions.onclick = function () {
+        modalinstructions.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == modalinstructions) {
             modalinstructions.style.display = "none";
         }
     }
-   
-    
+
+
+
     // This structure will set an attribute “source” and “id” to each card and then, those
     // will be put into an array "image".
     for (var i = 0; i < 16; i++) {
@@ -85,14 +103,14 @@
         images.push(img);
     } console.log(images);
 
-    
+
     //That function calls the initialization of the game.
     startGame();
     function startGame() {
         //The timer and Flips Counter will be reset
         counter = 0;
         counterf = 0;
-        flips.innerHTML = counterf;     
+        flips.innerHTML = counterf;
         matches = 0;
 
         //This command will shuffle the cards.
@@ -104,16 +122,16 @@
         //Targeting elements div with "back" and "front" as a class.
         var frontFaces = document.getElementsByClassName('front');
         var backFaces = document.getElementsByClassName('back');
-        
+
         //This function will increase the second in "1"
-       interval = setInterval(ValueCount, 1000);
-        
-        function ValueCount(){
+        interval = setInterval(ValueCount, 1000);
+
+        function ValueCount() {
             counter++;
             timer.innerHTML = `${counter} s`;
         }
 
-       
+
         // Displaying the cards on the HTML file according to the id number (vertically) .
         for (var i = 0; i < 16; i++) {
 
@@ -131,7 +149,7 @@
             // Displaying the cards on the HTML file according to the id number (horizontally) .
             if (i)
                 card.style.left = i === 0 || i === 4 || i === 8 || i === 12 ? 2 + 'vh' : i % 4 * 12 + 2 + 'vh';
-            
+
             // on click cards will  answer to function called to flip the cards
             card.addEventListener('click', flipCard, false);
         }
@@ -147,7 +165,7 @@
             frontFaces[i].setAttribute("id", images[i].id);
         }
 
-       //It will make the modal game over disappear
+        //It will make the modal game over disappear
         modalplayagain.style.display = "none";
     }
 
@@ -171,11 +189,11 @@
 
     // This function will flip the cards.
     function flipCard() {
-       
+
         //For every click, the flips counter will be increased by one.
         counterf++;
         flips.innerHTML = counterf;
-        
+
         // This will verify if there are more than 2 cards flipped.
         if (flippedCards.length < 2) {
             var faces = this.getElementsByClassName('face');
@@ -193,32 +211,32 @@
             flippedCards.push(this);
 
             //It verifes if the number of flipped cards is 2.
-            if(flippedCards.length === 2){
+            if (flippedCards.length === 2) {
 
                 // It verifies if the cards have the same id.
 
-                if(flippedCards[0].childNodes[3.].id === flippedCards[1].childNodes[3].id){
+                if (flippedCards[0].childNodes[3.].id === flippedCards[1].childNodes[3].id) {
 
                     // If the cards match a class "match" will be added to them.
                     flippedCards[0].childNodes[1].classList.toggle('match');
                     flippedCards[0].childNodes[3].classList.toggle('match');
                     flippedCards[1].childNodes[1].classList.toggle('match');
-                    flippedCards[1].childNodes[3].classList.toggle('match'); 
-                    
-                    
-                    
+                    flippedCards[1].childNodes[3].classList.toggle('match');
+
+
+
 
                     // It increases the counter in one.
                     matches++;
 
                     //It empties the array of flipped cards.
                     flippedCards = [];
-                    
+
                     //Score logic
-                    scorepoints = (matches*30000)/(counter*counterf)       
+                    scorepoints = (matches * 30000) / (counter * counterf)
 
                     // When the number of matches is equal to 8, it will call the function "gameOver"
-                    if(matches === 8){
+                    if (matches === 8) {
                         gameOver();
                     }
                 }
@@ -238,43 +256,43 @@
         }
 
     }
-    
-    
+
+
     // This function will reset all the parameters
     function gameOver() {
-        
-        scorepoints = (matches*30000)/(counter*counterf)
-                    console.log(matches)
-                    console.log(counter)
-                    console.log(counterf)
-        
+
+        scorepoints = (matches * 30000) / (counter * counterf)
+        console.log(matches)
+        console.log(counter)
+        console.log(counterf)
+
         scorepoints = parseInt(scorepoints)
-       
+
         //The modal game over appears
         modalplayagain.style.display = "block";
         tryagain.innerHTML = `<p>Your Score is <strong>${scorepoints}!</strong> Let's try again? </p>`
 
-        
+
         playagain.addEventListener('click', startGame, false);
         playagain.addEventListener('click', StopTimer, false);
         closeplayagain.addEventListener('click', startGame, false);
         closeplayagain.addEventListener('click', StopTimer, false);
-        
-        
+
+
         instructions.style.display = "none";
-        function StopTimer(){
+        function StopTimer() {
             clearInterval(interval)
-        
+
         }
-            
+
         arrayscore.push(scorepoints)
-        
-       console.log(arrayscore)
+
+        console.log(arrayscore)
         let maxscore = arrayscore[0];
         let minscore = arrayscore[0];
 
-        for (var player in arrayscore){
-            if (arrayscore[player] > maxscore){
+        for (var player in arrayscore) {
+            if (arrayscore[player] > maxscore) {
                 maxscore = arrayscore[player]
             }
         }
@@ -284,11 +302,10 @@
         //modalGameOver.addEventListener('click', startGame, false);
     }
 
-    
-    
-    
+
+
+
 
 }());
 
 
-            

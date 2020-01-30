@@ -1,167 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="assets/style.css" rel="stylesheet">
-	</link>
-	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="assets/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">	</script>
-	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-	
-    <script type="text/javascript">
-		(function(){
-      emailjs.init("user_3TbdfqZHg5YrQJmYmVA4x");
-      
-   })();
-	</script>
-	<title>Star Wars</title>
-</head>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"> </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-<body>
+        <script type="text/javascript">
+            (function(){
+            emailjs.init("user_3TbdfqZHg5YrQJmYmVA4x");
+            
+            })();
+        </script>
+        <title>Star Wars</title>
+    </head>
 
-	<h1 class="title">StarWars Memory Game</h1>
+    <body>
 
-	<!-- Container with Timer, Score, Flips and Instructions -->
-	<div class="info-container">
-		<h3>Time</h3><span class="time" id="timer">60</span>
-		<h3>Flips</h3><span class="flips" id="flips">0</span>
-		<h3 id="bestscore">Score</h3><span class="score" id="score">0</span>
+        <h1 class="title">StarWars Memory Game</h1>
 
-		<button id="instructions">Instructions</button>
-		<div id="modalinstructions" class="modal">
+        <!-- Container with Timer, Score, Flips and Instructions -->
+        <div class="info-container">
+            <h3>Time</h3><span class="time" id="timer">60</span>
+            <h3>Flips</h3><span class="flips" id="flips">0</span>
+            <h3 id="bestscore">Score</h3><span class="score" id="score">0</span>
 
-			<!-- Modal content -->
-			<div class="modal-content">
-				<div class="modal-header">
+            <button id="instructions">Instructions</button>
+            <div id="modalinstructions" class="modal">
 
-					<span class="closeinstructions">&times;</span>
-					<h2>Instructions</h2>
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
 
-					<p>Your goal is to match the cards accordingly.
-						The player turns over two cards (one at a time), if they match, they are kept face up and the
-						player can move on to the next two cards.
-						When the player chooses two cards that do not match, they will be returned again in the same
-						position they were in before.
-						The less time and less movements the higher your score.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+                        <span class="closeinstructions">&times;</span>
+                        <h2>Instructions</h2>
 
-	<!-- This container will have all the cards of the game displayed -->
-	<div id="container">
-		<div class="card" id="card0">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card1">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card2">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card3">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card4">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card5">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card6">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card7">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card8">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card9">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card10">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card11">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card12">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card13">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card14">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
-		<div class="card" id="card15">
-			<div class="face back"></div>
-			<div class="face front"></div>
-		</div>
+                        <p>Your goal is to match the cards accordingly.
+                            The player turns over two cards (one at a time), if they match, they are kept face up and the
+                            player can move on to the next two cards.
+                            When the player chooses two cards that do not match, they will be returned again in the same
+                            position they were in before.
+                            The less time and less movements the higher your score.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<!-- Modal shown when the game is over -->
-		<div id="modalplayagain" class="modal">
-			<div class="modal-content">
-				<span class="closeplayagain">&times;</span>
-				<h2>Congratulatios! May the Force Be With You!</h2>
+        <!-- This container will have all the cards of the game displayed -->
+        <div id="container">
+            <div class="card" id="card0">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card1">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card2">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card3">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card4">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card5">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card6">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card7">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card8">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card9">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card10">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card11">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card12">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card13">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card14">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
+            <div class="card" id="card15">
+                <div class="face back"></div>
+                <div class="face front"></div>
+            </div>
 
-				<p id="tryagain"></p>
-				<button id="playagain">Play again!</button>
-			</div>
-		</div>
+            <!-- Modal shown when the game is over -->
+            <div id="modalplayagain" class="modal">
+                <div class="modal-content">
+                    <span class="closeplayagain">&times;</span>
+                    <h2>Congratulatios! May the Force Be With You!</h2>
 
-	</div>
+                    <p id="tryagain"></p>
+                    <button id="playagain">Play again!</button>
+                </div>
+            </div>
 
-	<!-- Div with social media links and contact me -->
-	<div class="links">
-		<a href="https://www.linkedin.com/in/paulo-albuquerque-2a56673b/" class="fa fa-linkedin" target='_blank'></a>
-		<a href="https://github.com/Pauloa90" class="fa fa-github" target='_blank'></a>
-		<a href="#" class="fa fa-envelope" id="contactbutton"></a>
+        </div>
 
-		<!-- Modal Contact me-->
-		<div id="modalcontact">
-			<form class="modalcontactcontent"  onsubmit="return sendMail(this);" id="contactForm">
-				<label for="name">Name</label>
-				<input type="text" id="name" name="name" placeholder="Your name.." required>
+        <!-- Div with social media links and contact me -->
+        <div class="links">
+            <a href="https://www.linkedin.com/in/paulo-albuquerque-2a56673b/" class="fa fa-linkedin" target='_blank'></a>
+            <a href="https://github.com/Pauloa90" class="fa fa-github" target='_blank'></a>
+            <a href="#" class="fa fa-envelope" id="contactbutton"></a>
 
-				<label for="email">Email</label>
-				<input type="email" id="email" name="email" placeholder="Your email" required>
+            <!-- Modal Contact me-->
 
-				<label for="subject">Subject</label>
-				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+            <div id="modalcontactid" class="modalcontact">
+                <form class="modalcontactcontent" onsubmit="return sendMail(this);" id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name.." required>
 
-				<input type="submit" value="Submit" id="submit">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
 
-            </form>
-		</div>
-	</div>
-	</div>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
 
-</body>
-<script src="assets/sendEmail.js"></script>
-<script src="assets/script.js"></script>
+                    <input type="submit" value="Submit" id="submit">
+
+                        </form>
+            </div>
+
+        </div>
+        
+
+    </body>
+        <script src="assets/sendEmail.js"></script>
+        <script src="assets/script.js"></script>
 
 </html>

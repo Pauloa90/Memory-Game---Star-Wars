@@ -1,23 +1,15 @@
-
-function sendMail(contactForm){
+function sendMail(contactForm) {
     emailjs.send("gmail", "memorygame", {
-        "from_name": contactForm.name.value, 
+        "from_name": contactForm.name.value,
         "from_email": contactForm.email.value,
         "reason_contact": contactForm.subject.value
     })
-    .then(
-        function(response){
-            alert('Your email has been sent to Paulo Albuquerque', response)
+        .then(
+            function (response) {
+                alert('Your email has been sent to Paulo Albuquerque', response)
 
-        },
-        function(error){
-            alert('Please check your information in the boxes', error);
-        }); return false
+            },
+            function (error) {
+                alert('Please check your information in the boxes', error);
+            }); return false
 }
-var modalcontact = getElementById('modalcontact')
-
-var submit = document.getElementById('submit')
-    modalcontact.onclick = function (){
-    modalcontact.style.display = "none";
-}
-
