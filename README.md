@@ -83,15 +83,19 @@ This site is hosted using GitHub pages built from master Branch.
 ## Credits
 All the pictures on this game was found on Google Images. Please check the links for each image on the game.
 
-####Star Wars Characters
+####Star Wars Characters <br/>
+
 [Obi-Wan Kenobi](https://cdn.vox-dn.com/thumbor/8Ha_WQBpQKqDum1YsQgJTCgdjQs=/0x0:786x393/1200x800/filters:focal(331x135:455x259)/cdn.vox-cdn.com/uploads/chorus_image/image/65101167/obi-wan.0.0.jpg)<br/>
 [Yoda](https://media1.popsugar-assets.com/files/thumbor/LqE3qC_r02vF9FVXJmzsd7JvQT8/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/11/19/913/n/1922283/tmp_AQUwGI_54edbb98a270c952_MSDEMST_EC017.jpg)<br/>
 [Chewbacca](https://media.wired.com/photos/5bb3fffc2b915f2dff96d696/master/pass/chewbacca-971316060.jpg)<br/>
-[Leia]https://image.insider.com/59dfe5f542261621098b45a7?width=750&format=jpeg&auto=webp)<br/>
+[Leia](https://image.insider.com/59dfe5f542261621098b45a7?width=750&format=jpeg&auto=webp)<br/>
 [Luke](https://media.vanityfair.com/photos/5a3315e78ae8fd2b3a999bc7/2:3/w_639,h_959,c_limit/star-wars-the-last-jedi-is-luke-dead.jpgDarth)<br/>
 [Darth Maul](https://i.pinimg.com/originals/c7/4d/44/c74d44259d440052ebe9818273ee578c.jpg)<br/>
 [Rey](https://i.pinimg.com/originals/c7/4d/44/c74d44259d440052ebe9818273ee578c.jpg)<br/>
 [Darth Wader](https://img.cinemablend.com/filter:scale/quill/d/4/a/4/b/7/d4a4b7d7bfd9ec11ead1513f28c352a41aa74ae4.jpg?mw=600)<br/>
 
+#### Sound effets
+Soundtrack can be found [here](https://www.bensound.com/)
+Game over sound can be found [here](https://freesound.org/people/Leszek_Szary/sounds/171671/)
 
  
