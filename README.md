@@ -95,7 +95,8 @@ All the pictures on this game was found on Google Images. Please check the links
 [Darth Wader](https://img.cinemablend.com/filter:scale/quill/d/4/a/4/b/7/d4a4b7d7bfd9ec11ead1513f28c352a41aa74ae4.jpg?mw=600)<br/>
 
 #### Sound effets
-Soundtrack can be found [here](https://www.bensound.com/)
-Game over sound can be found [here](https://freesound.org/people/Leszek_Szary/sounds/171671/)
+
+Soundtrack can be found [here](https://www.bensound.com/)<br/>
+Game over sound can be found [here](https://freesound.org/people/Leszek_Szary/sounds/171671/)<br/>
 
  
