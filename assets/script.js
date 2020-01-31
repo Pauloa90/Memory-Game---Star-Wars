@@ -8,7 +8,16 @@
     // This Array will contain the objects with a source and id from 0 to 7.
     var images = [];
 
+    var sucess = document.getElementById('sucess')
+    
+    var sound = document.getElementById('sound')
+    function soundtrack(){
+        sound.play();
+    }
+    function playAudio() {
+        sucess.play();
 
+    }
     // This array will contain cards that are flipped.
     var turnedcards = [];
 
@@ -54,7 +63,7 @@
     var contactbutton = document.getElementById('contactbutton')
     var modalcontactid = document.getElementById('modalcontactid')
     var contactForm = document.getElementById('contactForm')
-    
+
 
     contactbutton.onclick = function () {
         modalcontactid.style.display = "block";
@@ -62,16 +71,16 @@
 
     submit.onclick = function () {
         modalcontactid.style.display = "none";
-        
+
     }
 
-     window.onclick = function (event) {
+    window.onclick = function (event) {
         if (event.target == modalcontactid) {
             modalcontactid.style.display = "none";
         }
     }
-   
-    
+
+
 
     // Targeting modal Play Again
     var modalplayagain = document.getElementById("modalplayagain");
@@ -106,6 +115,7 @@
 
     //That function calls the initialization of the game.
     startGame();
+    soundtrack();
     function startGame() {
         //The timer and Flips Counter will be reset
         counter = 0;
@@ -118,7 +128,7 @@
 
         //This will empty the array with flipped cards.
         turnedcards = [];
-        
+
         //Targeting elements div with "back" and "front" as a class.
         var frontFaces = document.getElementsByClassName('front');
         var backFaces = document.getElementsByClassName('back');
@@ -152,6 +162,8 @@
 
             // on click cards will  answer to function called to flip the cards
             card.addEventListener('click', turncard, false);
+            
+           
         }
 
         // It takes "match" and "flipped" classes from the targeted cards.
@@ -189,7 +201,7 @@
 
     // This function will flip the cards.
     function turncard() {
-
+        
         //For every click, the flips counter will be increased by one.
         counterf++;
         flips.innerHTML = counterf;
@@ -238,6 +250,7 @@
                     // When the number of matches is equal to 8, it will call the function "gameOver"
                     if (matches === 8) {
                         gameOver();
+                        playAudio();
                     }
                 }
             }
@@ -277,7 +290,7 @@
         playagain.addEventListener('click', StopTimer, false);
         closeplayagain.addEventListener('click', startGame, false);
         closeplayagain.addEventListener('click', StopTimer, false);
-
+        
 
         instructions.style.display = "none";
         function StopTimer() {
