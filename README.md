@@ -83,7 +83,7 @@ This site is hosted using GitHub pages built from master Branch.
 ## Credits
 All the pictures on this game was found on Google Images. Please check the links for each image on the game.
 
-####Star Wars Characters <br/>
+####Star Wars Characters 
 
 [Obi-Wan Kenobi](https://cdn.vox-dn.com/thumbor/8Ha_WQBpQKqDum1YsQgJTCgdjQs=/0x0:786x393/1200x800/filters:focal(331x135:455x259)/cdn.vox-cdn.com/uploads/chorus_image/image/65101167/obi-wan.0.0.jpg)<br/>
 [Yoda](https://media1.popsugar-assets.com/files/thumbor/LqE3qC_r02vF9FVXJmzsd7JvQT8/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/11/19/913/n/1922283/tmp_AQUwGI_54edbb98a270c952_MSDEMST_EC017.jpg)<br/>
