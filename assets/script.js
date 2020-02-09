@@ -63,7 +63,11 @@
     var contactbutton = document.getElementById('contactbutton')
     var modalcontactid = document.getElementById('modalcontactid')
     var contactForm = document.getElementById('contactForm')
+    var closecontact = document.getElementsByClassName("closecontact")[0];
 
+    closecontact.onclick = function () {
+        modalcontactid.style.display = "none";
+    }
 
     contactbutton.onclick = function () {
         modalcontactid.style.display = "block";

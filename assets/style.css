@@ -113,6 +113,22 @@ h3{
   cursor: pointer;
 }
 
+.closecontact{
+  color: #bfb5d6;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;  
+}
+
+.closecontact:hover,
+.closecontact:focus {
+  color: #2d038f;   
+
+                sdfsdfmmm,mkkkkkk
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /*Text inside the modal */
 h2{
     margin-bottom: 2vh;
